@@ -1,0 +1,22 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "no-prototype-builtins": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "prefer-const": "warn"
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}
