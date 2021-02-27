@@ -2,7 +2,7 @@ _Shoutout to https://github.com/stemmlerjs/simple-typescript-starter for teachin
 
 ---
 
-I wrote this little app to make it easier to write JS/TS integrations to do stuff with DroidCam OBS. DroidCam OBS comes with a little remote web interface, which is super cool - but web scraping is annoying. After a little reverse engineering and reading of API calls, this is what I came up with.
+I wrote this little app to make it easier to write JS/TS integrations to do stuff with [DroidCam OBS](https://www.dev47apps.com/obs/). DroidCam OBS comes with a little remote web interface, which is super cool - but web scraping is annoying. After a little reverse engineering and reading of API calls, this is what I came up with.
 
 I can't guarantee this will be accurate or work well (not a great sales pitch, I know) - but it does what I need it to, and I figured I might as well release it.
 
