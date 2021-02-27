@@ -8,6 +8,14 @@ I can't guarantee this will be accurate or work well (not a great sales pitch, I
 
 ---
 
+## Building
+
+Run `npm run build`, and your stuff ends up in the `build/` folder. Not much to this one :)
+
+Building is all done with `tsc`, thus configuration is in `tsconfig.json`.
+
+---
+
 ## Usage
 
 You're going to want to import the module, obviously - In javascript, that's probably something along the lines of
