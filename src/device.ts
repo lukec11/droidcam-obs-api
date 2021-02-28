@@ -1,4 +1,4 @@
-// imports
+// Imports
 import { DeviceInfo, DeviceModel } from './interfaces'
 import { fetchGetText, fetchPut } from './utils'
 import { autoFocusModes, whiteBalanceModes } from './static'
@@ -27,6 +27,10 @@ export default class Device implements DeviceModel {
     return this.url
   }
 
+  /**
+   * Get /camera/info with a bunch of information about the camera itself.
+   * @returns DeviceInfo payload
+   */
   public async getInfo(): Promise<DeviceInfo> {
     try {
       const res: string = await fetchGetText(`${this.getUrl()}/camera/info`)
@@ -41,6 +45,7 @@ export default class Device implements DeviceModel {
       }
       // If it's not a malformed JSON string, throw the error along because I'm lazy and don't want to deal with it here.
       throw err
+      // This is an indentation like this
     }
   }
 
@@ -63,7 +68,10 @@ export default class Device implements DeviceModel {
     return await fetchGetText(`${this.getUrl()}/phone/name`)
   }
 
-  /* Return a JSON list of cameras */
+  /**
+   * Returns an array of cameras on the device
+   * @return {Promise<string[]>} Camera Array
+   */
   public async getCameraList(): Promise<string[]> {
     // Splits the returned list into an array by newline
     const res: string[] = (
@@ -100,7 +108,7 @@ export default class Device implements DeviceModel {
   }
 
   /**
-   *
+   * Enable/Disable LED flashlight on device
    * @param status - boolean status to enable/disable flash
    * @returns Promise<boolean> representing successful or unsuccessful completion
    */
@@ -187,7 +195,12 @@ export default class Device implements DeviceModel {
       return false
     }
   }
-  // toggle exposure lock
+
+  /**
+   * Enable/Disable exposure lock
+   * @param {boolean} status EL on/off
+   * @return {Promise<boolean>} Successful completion
+   */
   public async setExposureLock(status: boolean): Promise<boolean> {
     try {
       // Check current status of EL
@@ -217,6 +230,7 @@ export default class Device implements DeviceModel {
       return false
     }
   }
+
   /**
    * Set the Auto Focus status of the device
    * @param mode - One of the included Autofocus Modes, as a string
