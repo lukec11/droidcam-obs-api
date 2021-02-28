@@ -8,8 +8,8 @@
     "start:dev": "NODE_ENV=development nodemon",
     "start": "npm run build && node build/index.js",
     "lint": "eslint . --ext .ts",
-    "prettier-format": "prettier-eslint --config .prettierrc $PWD/'src/**/*.ts' --write",
-    "prettier-watch": "onchange $PWD/'src/**/*.ts' -- prettier-eslint --write {{changed}}"
+    "prettier-format": "prettier-eslint --config .prettierrc $PWD'/src/**/*.ts' --write",
+    "prettier-watch": "onchange $PWD'/src/**/*.ts' -- prettier-eslint --write $PWD'/{{changed}}'"
   },
   "keywords": [],
   "author": "",
